@@ -26,9 +26,22 @@
 		8A8149A42DDD850F00AB74C4 /* SwiftSyntaxDowngrade */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftSyntaxDowngrade; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		61D5275B2DF82F1200E5FB21 /* Exceptions for "SwiftSyntaxDowngrade" folder in "SwiftSyntaxDowngrade" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				TestResource/input.swift,
+			);
+			target = 8A8149A32DDD850F00AB74C4 /* SwiftSyntaxDowngrade */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		8A8149A62DDD850F00AB74C4 /* SwiftSyntaxDowngrade */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				61D5275B2DF82F1200E5FB21 /* Exceptions for "SwiftSyntaxDowngrade" folder in "SwiftSyntaxDowngrade" target */,
+			);
 			path = SwiftSyntaxDowngrade;
 			sourceTree = "<group>";
 		};

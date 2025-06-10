@@ -30,8 +30,13 @@ func collectMembers(_ url: URL) {
     print(classesMembers)
 }
 
-// Change to the path where you want to convert the files.
-let targetDirPath = FileManager.default.homeDirectoryForCurrentUser.path() + "SwiftSyntaxDowngrade/SwiftSyntaxDowngrade/TestResource"
+let targetDirPath: String
+
+if CommandLine.arguments.count > 1 {
+    targetDirPath = CommandLine.arguments[1]
+} else {
+    targetDirPath = FileManager.default.homeDirectoryForCurrentUser.path() + "SwiftSyntaxDowngrade/SwiftSyntaxDowngrade/TestResource"
+}
 let fm = FileManager.default
 let files = (fm.enumerator(atPath: targetDirPath)?.allObjects ?? [])
   .compactMap { $0 as? String }
