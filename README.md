@@ -2,10 +2,15 @@
 
 This is a tool to downgrade Swift syntax from Swift 5.9 to Swift 5.3.
 
+## Build
+
+``` bash
+swift build -c release
+```
+
+
 ## Usage
 
-``` swift
-let url = URL(fileURLWithPath: "path/to/your/file.swift")
-let result = convert(url)
-try! SourceFilePrinter.writeToFile(syntax: result, path: url.path)
+``` bash
+./build/release/SwiftSyntaxDowngrade <path/to/your/swiftdir>
 ```

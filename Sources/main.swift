@@ -30,13 +30,12 @@ func collectMembers(_ url: URL) {
     print(classesMembers)
 }
 
-let targetDirPath: String
-
-if CommandLine.arguments.count > 1 {
-    targetDirPath = CommandLine.arguments[1]
-} else {
-    targetDirPath = FileManager.default.homeDirectoryForCurrentUser.path() + "SwiftSyntaxDowngrade/SwiftSyntaxDowngrade/TestResource"
+guard CommandLine.arguments.count > 1 else {
+    print("Usage: SwiftSyntaxDowngrade <path/to/your/swiftdir>")
+    exit(1)
 }
+let targetDirPath = CommandLine.arguments[1]
+
 let fm = FileManager.default
 let files = (fm.enumerator(atPath: targetDirPath)?.allObjects ?? [])
   .compactMap { $0 as? String }
